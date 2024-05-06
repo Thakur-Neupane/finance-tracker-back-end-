@@ -1,12 +1,11 @@
 import bcryptjs from "bcryptjs";
 const saltRound = 15;
-
-// encrypt
-export const hasPassword = (PlainPass) => {
-  return bcryptjs.hashSync(PlainPass, saltRound);
+//encrypt
+export const hasPassword = (plainPass) => {
+  return bcryptjs.hashSync(plainPass, saltRound);
 };
 
-// compare
-export const compairPassword = (PlainPass, hashPass) => {
-  return bcryptjs.compareSync(PlainPass, hashPass);
+//compare
+export const compairPassword = (plainPass, hashPass) => {
+  return bcryptjs.compareSync(plainPass, hashPass);
 };
